@@ -1,6 +1,12 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" enable search-as-you-type
+set incsearch
+
+" for python files, draw line at margin
+autocmd FileType python set colorcolumn=79 | highlight ColorColumn ctermbg=cyan guibg=orange
+
 " check for syntax errors on open as well as on save
 let g:syntastic_check_on_open=1
 
