@@ -44,7 +44,7 @@ set softtabstop=4
 set autoindent
 
 " show line numbers
-set number 
+set number
 
 " disable arrow keys
 map <up> <nop>
