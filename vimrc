@@ -19,16 +19,6 @@ let g:syntastic_python_checker_args="--disable=C0103"
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
 
-" use Ctrl+L to toggle relative line numbering
-function! g:ToggleNuMode()
-    if &nu == 1
-        set rnu
-    else
-        set nu
-    endif
-endfunction
-nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
-
 " indicate tabs
 set list listchars=tab:→\ 
 
