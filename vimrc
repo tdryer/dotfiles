@@ -29,8 +29,8 @@ function! g:ToggleNuMode()
 endfunction
 nnoremap <silent><C-L> :call g:ToggleNuMode()<cr>
 
-" indicate trailing whitespace and tabs
-set list listchars=tab:→\ ,trail:·
+" indicate tabs
+set list listchars=tab:→\ 
 
 " enable search highlighting
 set hlsearch
