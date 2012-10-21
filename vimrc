@@ -1,6 +1,9 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" use the X clipboard (requires vim from vim-gnome package for xterm_clipboard support
+set clipboard=unnamedplus
+
 " enable search-as-you-type
 set incsearch
 
