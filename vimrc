@@ -13,6 +13,7 @@ set timeoutlen=100
 " use 2 levels of indent folding
 set foldmethod=indent
 set foldnestmax=2
+set nofoldenable " unfold by default
 
 " use the X clipboard (requires vim from vim-gnome package for xterm_clipboard support
 set clipboard=unnamedplus
