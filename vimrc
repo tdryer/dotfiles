@@ -1,11 +1,21 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" options required for vim-powerline
+set nocompatible   " Disable vi-compatibility
+set laststatus=2   " Always show the statusline
+set encoding=utf-8 " Necessary to show Unicode glyphs
+set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
+
+" reduce lagginess of some operations
+set timeoutlen=100
+
+" use 2 levels of indent folding
+set foldmethod=indent
+set foldnestmax=2
+
 " use the X clipboard (requires vim from vim-gnome package for xterm_clipboard support
 set clipboard=unnamedplus
-
-" enable search-as-you-type
-set incsearch
 
 " for python files, draw line at margin
 autocmd FileType python set colorcolumn=79 | highlight ColorColumn ctermbg=cyan guibg=orange
@@ -25,8 +35,15 @@ set list listchars=tab:→\
 " enable search highlighting
 set hlsearch
 
+" enable search-as-you-type
+set incsearch
+
 " map space to clear search highlight
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+" ignore case when searching, except when pattern contains capital
+set ignorecase
+set smartcase
 
 " use spaces for indentation
 set expandtab
@@ -38,6 +55,10 @@ set autoindent
 
 " show line numbers
 set number
+
+" allow repeated indentation in visual mode
+vnoremap < <gv
+vnoremap > >gv
 
 " disable arrow keys
 map <up> <nop>
