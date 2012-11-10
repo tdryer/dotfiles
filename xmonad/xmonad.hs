@@ -4,16 +4,23 @@ import XMonad.Layout.IM
 import XMonad.Layout.Grid
 import XMonad.Layout.Reflect
 import XMonad.Hooks.ManageDocks
+import XMonad.Hooks.SetWMName
+import XMonad.Hooks.EwmhDesktops
 
 main = do
-    xmonad myConfig
+    xmonad $ ewmh myConfig
 
 myConfig = defaultConfig
     { modMask = mod4Mask -- use super key
     , layoutHook = myLayout
     , borderWidth = 2
-    , startupHook = spawn "xmobar"
+    , startupHook = myStartup
+    , handleEventHook = fullscreenEventHook
     }
+
+myStartup = do
+    spawn "xmobar"
+    setWMName "LG3D" -- minecraft/java workaround
 
 myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| im_double)
     where
