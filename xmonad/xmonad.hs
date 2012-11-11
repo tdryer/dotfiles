@@ -1,14 +1,14 @@
 import XMonad
-import XMonad.Hooks.DynamicLog
 import XMonad.Layout.IM
 import XMonad.Layout.Grid
 import XMonad.Layout.Reflect
+import XMonad.Layout.NoBorders
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.EwmhDesktops
 
 main = do
-    xmonad $ ewmh myConfig
+    xmonad myConfig
 
 myConfig = defaultConfig
     { modMask = mod4Mask -- use super key
@@ -22,7 +22,7 @@ myStartup = do
     spawn "xmobar"
     setWMName "LG3D" -- minecraft/java workaround
 
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full ||| im_double)
+myLayout = avoidStruts $ smartBorders $ tiled ||| Mirror tiled ||| Full ||| im_double
     where
         im_double = withIM (1/10) (Title "Buddy List") doubleTiled
         doubleTiled = Tall 2 delta ratio
