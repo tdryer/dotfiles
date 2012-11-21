@@ -1,6 +1,10 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" put tmp files in central location
+set backupdir=~/.vimbackup/
+set directory=~/.vimbackup/
+
 " options required for vim-powerline
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
