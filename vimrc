@@ -1,6 +1,9 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" comma-separated list of file patterns to ignore when autocompleting
+set wildignore=*.pyc
+
 " put tmp files in central location
 set backupdir=~/.vimbackup/
 set directory=~/.vimbackup/
