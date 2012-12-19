@@ -1,6 +1,9 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" read filetype-specific indent files
+filetype indent plugin on
+
 " comma-separated list of file patterns to ignore when autocompleting
 set wildignore=*.pyc
 
