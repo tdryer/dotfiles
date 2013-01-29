@@ -1,0 +1,6 @@
+[general]
+color_scheme = tom
+flush_output = False
+
+[keyboard]
+clear_line = C-c
