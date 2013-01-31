@@ -18,7 +18,8 @@ set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
 " reduce lagginess of some operations
-set timeoutlen=100
+" also affects some key combos like surround's, so don't make too low
+set timeoutlen=200
 
 " use 2 levels of indent folding
 set foldmethod=indent
