@@ -30,7 +30,7 @@ set nofoldenable " unfold by default
 set clipboard=unnamedplus
 
 " for python files, draw line at margin
-autocmd FileType python set colorcolumn=79 | highlight ColorColumn ctermbg=cyan guibg=orange
+autocmd FileType python set colorcolumn=79 | highlight ColorColumn guibg=orange
 
 " check for syntax errors on open as well as on save
 let g:syntastic_check_on_open=1
