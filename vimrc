@@ -1,5 +1,21 @@
-" enable pathogen to manage plugins
-call pathogen#infect()
+" BEGIN Vundle -------------------------------------------------------
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+" My bundles:
+    Bundle 'davidhalter/jedi-vim'
+    Bundle 'kien/ctrlp.vim'
+    " requires pylint
+    Bundle 'scrooloose/syntastic'
+    Bundle 'bitc/vim-bad-whitespace'
+    Bundle 'Lokaltog/vim-powerline'
+    Bundle 'tpope/vim-surround'
+    " requires compilation and recent vim
+    Bundle 'Valloric/YouCompleteMe'
+filetype plugin indent on
+ " END Vundle ---------------------------------------------
 
 " use syntax highlighting
 syntax on
@@ -45,8 +61,8 @@ autocmd FileType python set colorcolumn=79 | highlight ColorColumn guibg=orange
 " check for syntax errors on open as well as on save
 let g:syntastic_check_on_open=1
 
-" disable naming warnings for syntastic/pylint
-let g:syntastic_python_checker_args="--disable=C0103"
+" disable naming, inlined supression warnings for syntastic/pylint
+let g:syntastic_python_pylint_args=" -f parseable -r n -i y --disable=C0103 --disable=I0011"
 
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
