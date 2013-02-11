@@ -1,0 +1,6 @@
+[dotfiles]
+ignore = [
+    '.git',
+    '.gitignore',
+    '.gitmodules',
+    '*.swp']
