@@ -24,8 +24,8 @@ myStartup = do
 
 myLayout = avoidStruts $ smartBorders $ tiled ||| Mirror tiled ||| Full ||| im_double
     where
-        im_double = withIM (1/10) (Title "Buddy List") doubleTiled
-        doubleTiled = Tall 2 delta ratio
+        im_double = withIM (1/10) (Title "Buddy List") $ reflectHoriz doubleTiled
+        doubleTiled = Tall 1 delta ratio
         -- default tiling algorithm partitions the screen into two panes
         tiled   = Tall nmaster delta ratio
         -- The default number of windows in the master pane

@@ -1,6 +1,16 @@
 " enable pathogen to manage plugins
 call pathogen#infect()
 
+" use syntax highlighting
+syntax on
+
+" highlight the current line light gray
+set cursorline
+hi CursorLine cterm=none ctermbg=254 guibg=Gray89
+
+" make backspace work as expected
+set backspace=indent,eol,start
+
 " read filetype-specific indent files
 filetype indent plugin on
 
