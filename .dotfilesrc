@@ -3,4 +3,5 @@ ignore = [
     '.git',
     '.gitignore',
     '.gitmodules',
-    '*.swp']
+    '*.swp',
+    'README.rst']
