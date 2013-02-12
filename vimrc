@@ -17,6 +17,10 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
+ " this would be useful except it autoselects an option
+ " related to https://github.com/davidhalter/jedi-vim/issues/86
+let g:jedi#popup_on_dot = 0
+
 " use syntax highlighting
 syntax on
 
