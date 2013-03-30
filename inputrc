@@ -1,2 +1,5 @@
 # use vi keybindings for bash/readline
 set editing-mode vi
+
+# ctrl l to clear screen in vi mode
+Control-l: clear-screen
