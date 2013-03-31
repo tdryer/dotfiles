@@ -5,7 +5,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
-    Bundle 'davidhalter/jedi-vim'
     Bundle 'kien/ctrlp.vim'
     " requires pylint
     Bundle 'scrooloose/syntastic'
@@ -16,6 +15,9 @@ Bundle 'gmarik/vundle'
     Bundle 'Valloric/YouCompleteMe'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
+
+ " don't show annoying jedi scratch window for docstrings
+set completeopt=menu,menuone,longest
 
  " this would be useful except it autoselects an option
  " related to https://github.com/davidhalter/jedi-vim/issues/86
