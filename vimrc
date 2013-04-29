@@ -70,6 +70,9 @@ let g:syntastic_check_on_open=1
 " disable naming, inlined supression warnings for syntastic/pylint
 let g:syntastic_python_pylint_args=" -f parseable -r n -i y --disable=C0103 --disable=I0011"
 
+" use both MRI and rubocop checkers for Ruby
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
 

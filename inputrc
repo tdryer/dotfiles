@@ -1,5 +1,9 @@
 # use vi keybindings for bash/readline
+# except for ruby, which has bugs with vi mode
+$if ruby
+$else
 set editing-mode vi
+$endif
 
 # ctrl l to clear screen in vi mode
 Control-l: clear-screen
