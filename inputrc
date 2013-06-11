@@ -1,8 +1,11 @@
 # use vi keybindings for bash/readline
-# except for ruby, which has bugs with vi mode
+# except for python and ruby repls, which have problems with it
 $if ruby
 $else
-set editing-mode vi
+    $if python
+    $else
+        set editing-mode vi
+    $endif
 $endif
 
 # ctrl l to clear screen in vi mode
