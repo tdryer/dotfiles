@@ -49,6 +49,17 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 " also affects some key combos like surround's, so don't make too low
 set timeoutlen=200
 
+" make leaving insert mode with powerline quicker
+" from https://powerline.readthedocs.org/en/latest/tipstricks.html
+if ! has('gui_running')
+    set ttimeoutlen=10
+    augroup FastEscape
+        autocmd!
+        au InsertEnter * set timeoutlen=0
+        au InsertLeave * set timeoutlen=1000
+    augroup END
+endif
+
 " use 2 levels of indent folding
 set foldmethod=indent
 set foldnestmax=2
