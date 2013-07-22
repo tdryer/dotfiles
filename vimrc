@@ -16,6 +16,10 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
+" make save/quit work while accidentially pressing shift
+cabbr Q quit
+cabbr W write
+
 " don't show annoying jedi scratch window for docstrings
 set completeopt=menu,menuone,longest
 
