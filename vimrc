@@ -11,10 +11,18 @@ Bundle 'gmarik/vundle'
     Bundle 'bitc/vim-bad-whitespace'
     Bundle 'Lokaltog/vim-powerline'
     Bundle 'tpope/vim-surround'
+    Bundle 'altercation/vim-colors-solarized'
     " requires compilation and recent vim
     Bundle 'Valloric/YouCompleteMe'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
+
+ " switch tabs with tj/tk
+nnoremap tk :tabnext<CR>
+nnoremap tj :tabprev<CR>
+
+set background=dark
+colorscheme solarized
 
 " make save/quit work while accidentially pressing shift
 cabbr Q quit
@@ -77,9 +85,6 @@ autocmd FileType python set colorcolumn=79 | highlight ColorColumn guibg=orange
 
 " check for syntax errors on open as well as on save
 let g:syntastic_check_on_open=1
-
-" disable naming, inlined supression warnings for syntastic/pylint
-let g:syntastic_python_pylint_args=" -f parseable -r n -i y --disable=C0103 --disable=I0011"
 
 " use both MRI and rubocop checkers for Ruby
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']

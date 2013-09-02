@@ -1,3 +1,6 @@
+# use coloured bash prompt
+color_prompt=yes
+
 # From Ubuntu's default bashrc: ###############################################
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -108,3 +111,9 @@ fi
 
 # use .pystartup for python repl
 export PYTHONSTARTUP=~/.pystartup
+
+# fix TERM for tmux + gnome-terminal
+alias tmux="TERM=xterm-256color tmux"
+
+# enable virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
