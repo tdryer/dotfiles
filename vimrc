@@ -17,6 +17,9 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
+" scroll multiple lines at a time to reduce laginess with chromebook+tmux
+set scrolljump=4
+
  " switch tabs with tj/tk
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
@@ -35,7 +38,7 @@ set completeopt=menu,menuone,longest
 syntax on
 
 " highlight the current line light gray
-set cursorline
+"set cursorline
 hi CursorLine cterm=none ctermbg=254 guibg=Gray89
 
 " make backspace work as expected
