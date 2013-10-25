@@ -83,6 +83,9 @@ set clipboard=unnamedplus
 " for python files, draw line at margin
 autocmd FileType python set colorcolumn=79 | highlight ColorColumn guibg=orange
 
+" for html/javascript/css use 2 space indent
+autocmd Filetype html,javascript,css set shiftwidth=2 | set softtabstop=2
+
 " check for syntax errors on open as well as on save
 let g:syntastic_check_on_open=1
 
