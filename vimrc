@@ -86,6 +86,12 @@ autocmd FileType python set colorcolumn=79 | highlight ColorColumn guibg=orange
 " for html/javascript/css use 2 space indent
 autocmd Filetype html,javascript,css set shiftwidth=2 | set softtabstop=2
 
+" for go, use tabs indentation and do not highlight tabs
+autocmd FileType go set noexpandtab | set shiftwidth=8 | set softtabstop=8 | set nolist
+
+" auto format go files (requires Syntastic)
+"autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
 " treat *.md as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
