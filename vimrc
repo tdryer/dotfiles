@@ -95,8 +95,10 @@ autocmd FileType go setlocal noexpandtab | setlocal shiftwidth=8 | setlocal soft
 " treat *.md as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" check for syntax errors on open as well as on save
-let g:syntastic_check_on_open=1
+" only run syntastic manually on F12, clear syntastic on F10
+let g:syntastic_mode_map = { 'mode': 'passive' }
+map <F12> :SyntasticCheck<CR>
+map <F10> :SyntasticReset<CR>
 
 " use both MRI and rubocop checkers for Ruby
 let g:syntastic_ruby_checkers = ['mri', 'rubocop']
