@@ -24,7 +24,7 @@ set scrolljump=4
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 
-set background=dark
+set background=light
 colorscheme solarized
 
 " make save/quit work while accidentially pressing shift
