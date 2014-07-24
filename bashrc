@@ -120,3 +120,10 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # set GOPATH
 export GOPATH=/home/tom/Programming/Go
+
+# automatically open gphoto camera in file browser
+function camera-open() {
+    camera=gphoto2://\[$(gphoto2 --auto-detect | grep -Eo usb:[0-9]+,[0-9]+)\]
+    echo "Opening camera $camera..."
+    xdg-open $camera
+}
