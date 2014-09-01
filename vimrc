@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
     Bundle 'altercation/vim-colors-solarized'
     " requires compilation and recent vim
     Bundle 'Valloric/YouCompleteMe'
+    Bundle 'wting/rust.vim'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
