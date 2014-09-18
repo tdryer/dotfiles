@@ -117,3 +117,6 @@ alias tmux="TERM=xterm-256color tmux"
 
 # enable virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
+
+# set GOPATH
+export GOPATH=/home/tom/Programming/Go
