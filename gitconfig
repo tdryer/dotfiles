@@ -1,0 +1,11 @@
+[include]
+	# for user and github config
+	path = ~/.gitconfig.private
+[core]
+	editor = vim
+[color]
+	ui = true
+[alias]
+	graph = log --graph --all --decorate --oneline
+[push]
+	default = simple
