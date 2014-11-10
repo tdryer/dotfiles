@@ -46,7 +46,7 @@ set backspace=indent,eol,start
 filetype indent plugin on
 
 " comma-separated list of file patterns to ignore when autocompleting
-set wildignore=*.pyc
+set wildignore=*.pyc,*.class
 
 " put tmp files in central location
 set backupdir=~/.vimbackup/
