@@ -35,6 +35,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
+# lock screen using LightDM on Super+l
+bindsym Mod4+l exec dm-tool lock
+
 ###############################################################################
 # Panel Configuration (i3bar)
 ###############################################################################
