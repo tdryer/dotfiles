@@ -41,6 +41,16 @@ bindsym Mod4+l exec dm-tool lock
 # run rofi (a program launcher, see https://davedavenport.github.io/rofi/)
 bindsym Mod4+space exec rofi -rnow
 
+# bind audio media keys to PulseAudio
+set $sink `pactl info | grep "Default Sink: " | grep -Eo "[^ ]+$"`
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume $sink +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume $sink -- -5%
+bindsym XF86AudioMute exec pactl set-sink-mute $sink toggle
+
+# bind screen brightness media keys to xbacklight
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20
+
 ###############################################################################
 # Panel Configuration (i3bar)
 ###############################################################################
