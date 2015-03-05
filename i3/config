@@ -43,10 +43,17 @@ bindsym Mod4+l exec dm-tool lock
 ###############################################################################
 
 bar {
-    output DVI-I-1
+    # put the bar at the top of each monitor
     position top
+
+    # use i3status with i3status.conf for bar contents
     status_command i3status
+
+    # set bar font
     font pango:Ubuntu Bold 10
+
+    # show tray icons on the primary monitor
+    tray_output primary
 }
 
 ###############################################################################
