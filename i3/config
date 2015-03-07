@@ -7,9 +7,6 @@
 # gnome-settings-daemon is not required, instead use lxappearance to set the
 # GTK 2/3 themes.
 
-# Sensors applet
-exec --no-startup-id psensor
-
 # Network indicator applet
 exec --no-startup-id nm-applet
 
@@ -18,9 +15,6 @@ exec --no-startup-id xsetroot -solid '#808080'
 
 # Set monitor standby/suspend/off timeouts in seconds
 exec --no-startup-id xset dpms 1800 0 0
-
-# Simple volume control tray icon (from gnome-control-center package)
-exec --no-startup-id gnome-sound-applet
 
 # Start ssh-agent for passwordless ssh
 exec --no-startup-id ssh-add
