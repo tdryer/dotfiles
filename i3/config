@@ -6,6 +6,8 @@
 
 # gnome-settings-daemon is not required, instead use lxappearance to set the
 # GTK 2/3 themes.
+# widget theme: greybird (shimmer-themes)
+# icon theme: elementary xfce (xubuntu-icon-theme)
 
 # Network indicator applet
 exec --no-startup-id nm-applet
