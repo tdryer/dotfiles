@@ -31,8 +31,8 @@ bindsym $mod+Return exec i3-sensible-terminal
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
 
-# lock screen using LightDM on Super+l
-bindsym Mod4+l exec dm-tool lock
+# lock screen using gnome-screensaver on Super+l
+bindsym Mod4+l exec gnome-screensaver-command --lock
 
 # run rofi (a program launcher, see https://davedavenport.github.io/rofi/)
 # rofi-list-directores is a custom script to list commands to open each directory in home
