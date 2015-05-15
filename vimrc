@@ -15,6 +15,8 @@ Bundle 'gmarik/vundle'
     " requires compilation and recent vim
     Bundle 'Valloric/YouCompleteMe'
     Bundle 'wting/rust.vim'
+    Bundle 'ledger/vim-ledger'
+    Bundle 'ConradIrwin/vim-bracketed-paste'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
