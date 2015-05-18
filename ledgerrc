@@ -1,0 +1,3 @@
+--pedantic
+--file ~/Documents/finances.ledger
+--payee-width 30
