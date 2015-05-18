@@ -106,8 +106,8 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 map <F12> :SyntasticCheck<CR>
 map <F10> :SyntasticReset<CR>
 
-" use both MRI and rubocop checkers for Ruby
-let g:syntastic_ruby_checkers = ['mri', 'rubocop']
+" for python, use pylint and pep8 checkers
+let g:syntastic_python_checkers = ['pylint', 'pep8']
 
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
