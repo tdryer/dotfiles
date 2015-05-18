@@ -9,6 +9,9 @@
 # widget theme: greybird (shimmer-themes)
 # icon theme: elementary xfce (xubuntu-icon-theme)
 
+# Compton compositor
+exec --no-startup-id compton
+
 # Network indicator applet
 exec --no-startup-id nm-applet
 
