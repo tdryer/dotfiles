@@ -20,14 +20,17 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
  " END Vundle ---------------------------------------------
 
- " switch tabs with tj/tk
+" enable spell checking
+set spell
+
+" switch tabs with tj/tk
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 
 set background=dark
 colorscheme solarized
 
-" make save/quit work while accidentially pressing shift
+" make save/quit work while accidentally pressing shift
 cabbr Q quit
 cabbr W write
 
