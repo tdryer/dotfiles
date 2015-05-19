@@ -106,6 +106,21 @@ let g:syntastic_mode_map = { 'mode': 'passive' }
 map <F12> :SyntasticCheck<CR>
 map <F10> :SyntasticReset<CR>
 
+" style all syntastic signs as 'todo' except errors
+highlight link SyntasticErrorSign error
+highlight link SyntasticWarningSign todo
+highlight link SyntasticStyleWarningSign todo
+highlight link SyntasticStyleErrorSign todo
+
+" use fat arrow for syntastic signs
+let g:syntastic_error_symbol = '➔'
+let g:syntastic_style_error_symbol = '➔'
+let g:syntastic_warning_symbol = '➔'
+let g:syntastic_style_warning_symbol = '➔'
+
+" always run all syntastic checkers
+let g:syntastic_aggregate_errors = 1
+
 " for python, use pylint and pep8 checkers
 let g:syntastic_python_checkers = ['pylint', 'pep8']
 
