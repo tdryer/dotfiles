@@ -89,8 +89,8 @@ set clipboard=unnamedplus
 " for python files, draw line at margin
 autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=orange
 
-" for html/javascript/css use 2 space indent
-autocmd Filetype html,javascript,css setlocal shiftwidth=2 | setlocal softtabstop=2
+" for html, javascript, css, proto use 2 space indent
+autocmd Filetype html,javascript,css,proto setlocal shiftwidth=2 | setlocal softtabstop=2
 
 " for go, use tabs indentation and do not highlight tabs
 autocmd FileType go setlocal noexpandtab | setlocal shiftwidth=8 | setlocal softtabstop=8 | setlocal nolist
