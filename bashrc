@@ -127,3 +127,6 @@ function camera-open() {
     echo "Opening camera $camera..."
     xdg-open $camera
 }
+
+# prevent accidentally closing shell by requiring ctrl+d twice consecutively to exit
+export IGNOREEOF=1
