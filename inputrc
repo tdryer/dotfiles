@@ -10,3 +10,6 @@ $endif
 
 # ctrl l to clear screen in vi mode
 Control-l: clear-screen
+
+# show vi mode in prompt
+set show-mode-in-prompt on
