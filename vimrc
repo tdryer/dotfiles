@@ -23,6 +23,9 @@ filetype plugin indent on
 " enable spell checking
 set spell
 
+" don't highlight the first word of a sentence if it's uncapitalized
+set spellcapcheck=""
+
 " switch tabs with tj/tk
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
