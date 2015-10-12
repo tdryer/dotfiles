@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
-    Bundle 'kien/ctrlp.vim'
+    Bundle 'ctrlpvim/ctrlp.vim'
     " requires pylint
     Bundle 'scrooloose/syntastic'
     Bundle 'bitc/vim-bad-whitespace'
