@@ -6,15 +6,13 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
     Bundle 'ctrlpvim/ctrlp.vim'
-    " requires pylint
     Bundle 'scrooloose/syntastic'
     Bundle 'bitc/vim-bad-whitespace'
     Bundle 'Lokaltog/vim-powerline'
     Bundle 'tpope/vim-surround'
     Bundle 'altercation/vim-colors-solarized'
-    " requires compilation and recent vim
     Bundle 'Valloric/YouCompleteMe'
-    Bundle 'wting/rust.vim'
+    Bundle 'rust-lang/rust.vim'
     Bundle 'ledger/vim-ledger'
     Bundle 'ConradIrwin/vim-bracketed-paste'
 filetype plugin indent on
