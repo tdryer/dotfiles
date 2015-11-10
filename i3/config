@@ -21,9 +21,6 @@ exec --no-startup-id xsetroot -solid '#808080'
 # Set monitor standby/suspend/off timeouts in seconds
 exec --no-startup-id xset dpms 1800 0 0
 
-# Start ssh-agent for passwordless ssh
-exec --no-startup-id ssh-add
-
 ###############################################################################
 # Command keybindings
 ###############################################################################
