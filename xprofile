@@ -1,5 +1,2 @@
 # Disable Ubuntu's overlay scrollbars
 export LIBOVERLAY_SCROLLBAR=0
-
-# Allow using the gnome-keyring-daemon started by PAM
-export $(gnome-keyring-daemon --start --components=pkcs11,secrets,ssh,gpg)
