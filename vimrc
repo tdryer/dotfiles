@@ -41,6 +41,9 @@ let g:airline_section_a = ''        " hide mode indicator
 let g:airline_section_x = ''        " hide filetype
 let g:airline_section_y = ''        " hide file encoding
 
+" have ctrlp use ag for searching, this is faster and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
 " enable spell checking
 set spell
 
