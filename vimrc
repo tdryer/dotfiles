@@ -6,9 +6,10 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
     Bundle 'ctrlpvim/ctrlp.vim'
-    Bundle 'scrooloose/syntastic'
+    Bundle 'tdryer/neomake'
     Bundle 'bitc/vim-bad-whitespace'
-    Bundle 'Lokaltog/vim-powerline'
+    Bundle 'vim-airline/vim-airline'
+    Bundle 'vim-airline/vim-airline-themes'
     Bundle 'tpope/vim-surround'
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'Valloric/YouCompleteMe'
@@ -16,7 +17,29 @@ Bundle 'gmarik/vundle'
     Bundle 'ledger/vim-ledger'
     Bundle 'ConradIrwin/vim-bracketed-paste'
 filetype plugin indent on
- " END Vundle ---------------------------------------------
+" END Vundle ---------------------------------------------
+
+" run Neomake on F12
+map <F12> :Neomake<CR>
+
+" set appearance of Neomake signs
+let g:neomake_error_sign = { 'text': '➔', 'texthl': 'error' }
+let g:neomake_warning_sign = { 'text': '➔', 'texthl': 'todo' }
+
+" set airline theme
+let g:airline_theme='base16'
+
+" hide airline section separators
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" only enable the airline extensions I want
+let g:airline_extensions = ['ctrlp', 'neomake']
+
+" hide most status line clutter
+let g:airline_section_a = ''        " hide mode indicator
+let g:airline_section_x = ''        " hide filetype
+let g:airline_section_y = ''        " hide file encoding
 
 " enable spell checking
 set spell
@@ -58,7 +81,6 @@ set wildignore=*.pyc,*.class
 set backupdir=~/.vimbackup/
 set directory=~/.vimbackup/
 
-" options required for vim-powerline
 set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -67,17 +89,6 @@ set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 " reduce lagginess of some operations
 " also affects some key combos like surround's, so don't make too low
 set timeoutlen=200
-
-" make leaving insert mode with powerline quicker
-" from https://powerline.readthedocs.org/en/latest/tipstricks.html
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
 
 " use 2 levels of indent folding
 set foldmethod=indent
@@ -96,34 +107,8 @@ autocmd Filetype html,javascript,css,proto setlocal shiftwidth=2 | setlocal soft
 " for go, use tabs indentation and do not highlight tabs
 autocmd FileType go setlocal noexpandtab | setlocal shiftwidth=8 | setlocal softtabstop=8 | setlocal nolist
 
-" auto format go files (requires Syntastic)
-"autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
 " treat *.md as markdown
 au BufRead,BufNewFile *.md set filetype=markdown
-
-" only run syntastic manually on F12, clear syntastic on F10
-let g:syntastic_mode_map = { 'mode': 'passive' }
-map <F12> :SyntasticCheck<CR>
-map <F10> :SyntasticReset<CR>
-
-" style all syntastic signs as 'todo' except errors
-highlight link SyntasticErrorSign error
-highlight link SyntasticWarningSign todo
-highlight link SyntasticStyleWarningSign todo
-highlight link SyntasticStyleErrorSign todo
-
-" use fat arrow for syntastic signs
-let g:syntastic_error_symbol = '➔'
-let g:syntastic_style_error_symbol = '➔'
-let g:syntastic_warning_symbol = '➔'
-let g:syntastic_style_warning_symbol = '➔'
-
-" always run all syntastic checkers
-let g:syntastic_aggregate_errors = 1
-
-" for python, use pylint and pep8 checkers
-let g:syntastic_python_checkers = ['pylint', 'pep8']
 
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
