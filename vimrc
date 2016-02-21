@@ -6,7 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
     Bundle 'ctrlpvim/ctrlp.vim'
-    Bundle 'tdryer/neomake'
+    Bundle 'benekastah/neomake'
     Bundle 'bitc/vim-bad-whitespace'
     Bundle 'vim-airline/vim-airline'
     Bundle 'vim-airline/vim-airline-themes'
