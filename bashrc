@@ -82,15 +82,11 @@ fi
 # Custom stuff: ###############################################################
 
 # set custom bash prompt with current git branch and number of jobs
-PROMPT_COMMAND='
-hasjobs=$(jobs -p)
-gitbranch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
-'
-PS1='\
-${hasjobs:+(\j)}\
-${gitbranch:+($gitbranch)}\
-\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ \
-'
+# (requires git bash_completion for __git_ps1)
+GIT_PS1_SHOWDIRTYSTATE=1
+GIT_PS1_STATESEPARATOR=""
+PROMPT_COMMAND='hasjobs=$(jobs -p)'
+PS1='${hasjobs:+(\j)}$(__git_ps1 "(%s)")\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # use .pystartup for python repl
 export PYTHONSTARTUP=~/.pystartup
