@@ -41,6 +41,12 @@ let g:airline_section_a = ''        " hide mode indicator
 let g:airline_section_x = ''        " hide filetype
 let g:airline_section_y = ''        " hide file encoding
 
+" make ctrlp default to mixed mode
+let g:ctrlp_cmd = "CtrlPMixed"
+
+" only show MRU files in the working directory
+let g:ctrlp_mruf_relative = 1
+
 " have ctrlp use ag for searching, this is faster and respects .gitignore
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
