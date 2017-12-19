@@ -4,10 +4,8 @@
 # Startup Applications
 ###############################################################################
 
-# gnome-settings-daemon is not required, instead use lxappearance to set the
-# GTK 2/3 themes, and qtconfig-qt4 to set the Qt4 theme.
-# widget theme: greybird (shimmer-themes)
-# icon theme: elementary xfce (xubuntu-icon-theme)
+# Set primary monitor
+exec --no-startup-id xrandr --output DVI-I-1 --primary
 
 # Restore wallpaper configured by nitrogen
 exec --no-startup-id nitrogen --restore
