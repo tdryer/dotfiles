@@ -27,7 +27,7 @@ let g:neomake_error_sign = { 'text': '➔', 'texthl': 'error' }
 let g:neomake_warning_sign = { 'text': '➔', 'texthl': 'todo' }
 
 " set airline theme
-let g:airline_theme='base16'
+let g:airline_theme='luna'
 
 " hide airline section separators
 let g:airline_left_sep=''
@@ -70,12 +70,14 @@ cabbr W write
 " don't show annoying jedi scratch window for docstrings
 set completeopt=menu,menuone,longest
 
+" disable call signatures since the popup is buggy
+"let g:jedi#show_call_signatures = 0
+
 " use syntax highlighting
 syntax on
 
-" highlight the current line light gray
+" highlight the current line
 set cursorline
-hi CursorLine cterm=none ctermbg=254 guibg=Gray89
 
 " make backspace work as expected
 set backspace=indent,eol,start
