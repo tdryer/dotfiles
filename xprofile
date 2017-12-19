@@ -1,2 +1,2 @@
-# Disable Ubuntu's overlay scrollbars
-export LIBOVERLAY_SCROLLBAR=0
+# Use GTK theme for QT5 apps such as KeePassXC
+export QT_QPA_PLATFORMTHEME=gtk2
