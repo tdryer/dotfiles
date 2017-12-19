@@ -1,0 +1,4 @@
+# Use same font settings as normal Ubuntu session:
+# https://askubuntu.com/questions/69955/different-font-rendering-with-other-window-manager
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
