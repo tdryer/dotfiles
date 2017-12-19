@@ -1,6 +1,3 @@
-# use coloured bash prompt
-color_prompt=yes
-
 # From Ubuntu's default bashrc: ###############################################
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -72,6 +69,9 @@ fi
 
 # Custom stuff: ###############################################################
 
+# use coloured bash prompt
+color_prompt=yes
+
 # set custom bash prompt with current git branch and number of jobs
 # (requires git bash_completion for __git_ps1)
 GIT_PS1_SHOWDIRTYSTATE=1
@@ -90,15 +90,6 @@ esac
 
 # use .pystartup for python repl
 export PYTHONSTARTUP=~/.pystartup
-
-# fix TERM for tmux + gnome-terminal
-alias tmux="TERM=xterm-256color tmux"
-
-# enable virtualenvwrapper
-source /usr/local/bin/virtualenvwrapper.sh
-
-# set GOPATH
-export GOPATH=/home/tom/Programming/Go
 
 # automatically open gphoto camera in file browser
 function camera-open() {
