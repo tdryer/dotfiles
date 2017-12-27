@@ -39,7 +39,7 @@ bindsym Mod4+space exec rofi -show run -font "ubuntu mono 18" -fg "#505050" -bg 
 # bind audio media keys to PulseAudio
 set $refresh_i3status killall -USR1 i3status
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -- -5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 
 # bind screen brightness media keys to xbacklight
