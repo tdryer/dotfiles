@@ -41,6 +41,11 @@ let g:airline_section_a = ''        " hide mode indicator
 let g:airline_section_x = ''        " hide filetype
 let g:airline_section_y = ''        " hide file encoding
 
+" remove ugly symbols
+let g:airline_symbols = {}
+let g:airline_symbols.linenr = ':'
+let g:airline_symbols.maxlinenr = ''
+
 " make ctrlp default to mixed mode
 let g:ctrlp_cmd = "CtrlPMixed"
 
