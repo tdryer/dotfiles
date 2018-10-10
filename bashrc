@@ -40,7 +40,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # handy ls alias
-alias ll='ls -l --classify'
+alias ll='ls -l --classify --human-readable'
 
 # Add alias to use Python 3 by default
 alias python='python3'
