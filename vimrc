@@ -12,10 +12,11 @@ Bundle 'gmarik/vundle'
     Bundle 'vim-airline/vim-airline-themes'
     Bundle 'tpope/vim-surround'
     Bundle 'altercation/vim-colors-solarized'
-    Bundle 'Valloric/YouCompleteMe'
     Bundle 'rust-lang/rust.vim'
     Bundle 'ledger/vim-ledger'
     Bundle 'ConradIrwin/vim-bracketed-paste'
+    Bundle 'zxqfl/tabnine-vim'
+    Bundle 'sirtaj/vim-openscad'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
 
