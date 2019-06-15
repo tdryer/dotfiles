@@ -103,6 +103,9 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
+" disable modelines for security (enabled by nocompatible)
+set nomodeline
+
 " reduce lagginess of some operations
 " also affects some key combos like surround's, so don't make too low
 set timeoutlen=200
