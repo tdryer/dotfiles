@@ -110,11 +110,6 @@ set nomodeline
 " also affects some key combos like surround's, so don't make too low
 set timeoutlen=200
 
-" use 2 levels of indent folding
-set foldmethod=indent
-set foldnestmax=2
-set nofoldenable " unfold by default
-
 " use the X clipboard (requires vim from vim-gnome package for xterm_clipboard support
 set clipboard=unnamedplus
 
@@ -123,12 +118,6 @@ autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=or
 
 " for html, javascript, css, proto use 2 space indent
 autocmd Filetype html,javascript,css,proto setlocal shiftwidth=2 | setlocal softtabstop=2
-
-" for go, use tabs indentation and do not highlight tabs
-autocmd FileType go setlocal noexpandtab | setlocal shiftwidth=8 | setlocal softtabstop=8 | setlocal nolist
-
-" treat *.md as markdown
-au BufRead,BufNewFile *.md set filetype=markdown
 
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
@@ -163,13 +152,3 @@ set number
 " allow repeated indentation in visual mode
 vnoremap < <gv
 vnoremap > >gv
-
-" disable arrow keys
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
