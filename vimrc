@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 " My bundles:
-    Bundle 'ctrlpvim/ctrlp.vim'
+    Bundle 'junegunn/fzf'
     Bundle 'benekastah/neomake'
     Bundle 'bitc/vim-bad-whitespace'
     Bundle 'vim-airline/vim-airline'
@@ -23,6 +23,9 @@ filetype plugin indent on
 " run Neomake on F12
 map <F12> :Neomake<CR>
 
+" run FZF on ctrl-p
+map <C-P> :FZF<CR>
+
 " set appearance of Neomake signs
 let g:neomake_error_sign = { 'text': '➔', 'texthl': 'error' }
 let g:neomake_warning_sign = { 'text': '➔', 'texthl': 'todo' }
@@ -35,7 +38,7 @@ let g:airline_left_sep=''
 let g:airline_right_sep=''
 
 " only enable the airline extensions I want
-let g:airline_extensions = ['ctrlp', 'neomake']
+let g:airline_extensions = ['neomake']
 
 " hide most status line clutter
 let g:airline_section_a = ''        " hide mode indicator
@@ -46,15 +49,6 @@ let g:airline_section_y = ''        " hide file encoding
 let g:airline_symbols = {}
 let g:airline_symbols.linenr = ':'
 let g:airline_symbols.maxlinenr = ''
-
-" make ctrlp default to mixed mode
-let g:ctrlp_cmd = "CtrlPMixed"
-
-" only show MRU files in the working directory
-let g:ctrlp_mruf_relative = 1
-
-" have ctrlp use ag for searching, this is faster and respects .gitignore
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " enable spell checking
 set spell
