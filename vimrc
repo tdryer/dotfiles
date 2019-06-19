@@ -146,3 +146,7 @@ set number
 " allow repeated indentation in visual mode
 vnoremap < <gv
 vnoremap > >gv
+
+" configure netrw (:Ex or :Tex)
+let g:netrw_banner = 0      " disable banner
+let g:netrw_liststyle = 3   " use tree style
