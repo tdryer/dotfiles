@@ -15,10 +15,17 @@ Bundle 'gmarik/vundle'
     Bundle 'rust-lang/rust.vim'
     Bundle 'ledger/vim-ledger'
     Bundle 'ConradIrwin/vim-bracketed-paste'
-    Bundle 'zxqfl/tabnine-vim'
+    Bundle 'lifepillar/vim-mucomplete'
     Bundle 'sirtaj/vim-openscad'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
+
+" always show completion popup menu, but do not select a match
+set completeopt=menuone,noselect
+
+" enable autocompletion using mucomplete and Vim's 'complete'
+let g:mucomplete#enable_auto_at_startup = 1
+let g:mucomplete#chains = { 'default': ['c-n'] }
 
 " run Neomake on F12
 map <F12> :Neomake<CR>
@@ -66,12 +73,6 @@ colorscheme solarized
 " make save/quit work while accidentally pressing shift
 cabbr Q quit
 cabbr W write
-
-" don't show annoying jedi scratch window for docstrings
-set completeopt=menu,menuone,longest
-
-" disable call signatures since the popup is buggy
-"let g:jedi#show_call_signatures = 0
 
 " use syntax highlighting
 syntax on
