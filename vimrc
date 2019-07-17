@@ -23,6 +23,9 @@ filetype plugin indent on
 " always show completion popup menu, but do not select a match
 set completeopt=menuone,noselect
 
+" only scan open buffers for completions
+set complete=.,w,b
+
 " enable autocompletion using mucomplete and Vim's 'complete'
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['c-n'] }
