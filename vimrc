@@ -26,7 +26,10 @@ set completeopt=menuone,noselect
 " only scan open buffers for completions
 set complete=.,w,b
 
-" enable autocompletion using mucomplete and Vim's 'complete'
+" disable ins-completion messages
+set shortmess+=c
+
+" enable autocompletion using mucomplete and ins-completion
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['c-n'] }
 
@@ -96,7 +99,6 @@ set wildignore=*.pyc,*.class
 set backupdir=~/.vimbackup/
 set directory=~/.vimbackup/
 
-set nocompatible   " Disable vi-compatibility
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
