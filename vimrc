@@ -29,6 +29,9 @@ set complete=.,w,b
 " disable ins-completion messages
 set shortmess+=c
 
+" disable bell caused by ins-completion
+set belloff+=ctrlg
+
 " enable autocompletion using mucomplete and ins-completion
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['c-n'] }
