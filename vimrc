@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
     Bundle 'ConradIrwin/vim-bracketed-paste'
     Bundle 'lifepillar/vim-mucomplete'
     Bundle 'sirtaj/vim-openscad'
+    Bundle 'Vimjas/vim-python-pep8-indent'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
 
@@ -91,9 +92,6 @@ set cursorline
 
 " make backspace work as expected
 set backspace=indent,eol,start
-
-" read filetype-specific indent files
-filetype indent plugin on
 
 " comma-separated list of file patterns to ignore when autocompleting
 set wildignore=*.pyc,*.class
