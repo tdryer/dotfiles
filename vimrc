@@ -14,12 +14,19 @@ Bundle 'gmarik/vundle'
     Bundle 'altercation/vim-colors-solarized'
     Bundle 'rust-lang/rust.vim'
     Bundle 'ledger/vim-ledger'
-    Bundle 'ConradIrwin/vim-bracketed-paste'
     Bundle 'lifepillar/vim-mucomplete'
     Bundle 'sirtaj/vim-openscad'
     Bundle 'Vimjas/vim-python-pep8-indent'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
+
+" enable bracketed paste mode in screen/tmux (see :help xterm-bracketed-paste)
+if &term =~ "screen"
+      let &t_BE = "\e[?2004h"
+      let &t_BD = "\e[?2004l"
+      exec "set t_PS=\e[200~"
+      exec "set t_PE=\e[201~"
+endif
 
 " always show completion popup menu, but do not select a match
 set completeopt=menuone,noselect
