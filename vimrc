@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
     Bundle 'lifepillar/vim-mucomplete'
     Bundle 'sirtaj/vim-openscad'
     Bundle 'Vimjas/vim-python-pep8-indent'
+    Bundle 'tpope/vim-markdown'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
 
