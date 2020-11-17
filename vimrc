@@ -128,6 +128,15 @@ autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=or
 " for html, javascript, css, proto use 2 space indent
 autocmd Filetype html,javascript,css,proto setlocal shiftwidth=2 | setlocal softtabstop=2
 
+" for text files, wrap lines on word boundary
+autocmd FileType text,markdown setlocal linebreak
+
+" colour markdown code differently than normal text
+hi def link markdownCode String
+
+" join lines with single space after period instead of double
+set nojoinspaces
+
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
 
