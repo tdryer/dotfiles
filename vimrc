@@ -133,8 +133,7 @@ autocmd Filetype html,javascript,css,proto,yaml
 autocmd FileType text,markdown setlocal linebreak
 
 " colour markdown code differently than normal text
-hi def link markdownCode        String
-hi def link markdownCodeBlock   String
+hi def link markdownCode String
 
 " join lines with single space after period instead of double
 set nojoinspaces
