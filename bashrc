@@ -94,4 +94,4 @@ export IGNOREEOF=1
 export $(gnome-keyring-daemon --start)
 
 # Tell fzf to use ag to list files.
-export FZF_DEFAULT_COMMAND='ag -l --nocolor -g ""'
+export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
