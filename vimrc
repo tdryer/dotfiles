@@ -129,6 +129,9 @@ autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=or
 autocmd Filetype html,javascript,css,proto,yaml
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+" for rust, bind rustfmt to F12
+autocmd FileType rust nnoremap <F12> :RustFmt<CR>
+
 " for text files, wrap lines on word boundary
 autocmd FileType text,markdown setlocal linebreak
 
