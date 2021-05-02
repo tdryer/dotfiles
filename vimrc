@@ -104,9 +104,9 @@ set backspace=indent,eol,start
 " comma-separated list of file patterns to ignore when autocompleting
 set wildignore=*.pyc,*.class
 
-" put tmp files in central location
-set backupdir=~/.vimbackup/
-set directory=~/.vimbackup/
+" put tmp files in central location (need to create directories manually)
+set backupdir=~/.cache/vim/backup
+set directory=~/.cache/vim/swap
 
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
