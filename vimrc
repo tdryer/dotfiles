@@ -18,8 +18,12 @@ Bundle 'gmarik/vundle'
     Bundle 'sirtaj/vim-openscad'
     Bundle 'Vimjas/vim-python-pep8-indent'
     Bundle 'tpope/vim-markdown'
+    Bundle 'Chiel92/vim-autoformat'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
+
+" bind Autoformat (black, rustfmt, etc.) to F12
+nnoremap <F12> :Autoformat<CR>
 
 " enable bracketed paste mode in screen/tmux (see :help xterm-bracketed-paste)
 if &term =~ "screen"
@@ -44,9 +48,6 @@ set belloff+=ctrlg
 " enable autocompletion using mucomplete and ins-completion
 let g:mucomplete#enable_auto_at_startup = 1
 let g:mucomplete#chains = { 'default': ['c-n'] }
-
-" run Neomake on F12
-map <F12> :Neomake<CR>
 
 " run FZF on ctrl-p
 map <C-P> :FZF<CR>
@@ -128,9 +129,6 @@ autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=or
 " for html, javascript, css, proto, yaml use 2 space indent
 autocmd Filetype html,javascript,css,proto,yaml
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
-
-" for rust, bind rustfmt to F12
-autocmd FileType rust nnoremap <F12> :RustFmt<CR>
 
 " for text files, wrap lines on word boundary
 autocmd FileType text,markdown setlocal linebreak
