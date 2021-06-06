@@ -42,9 +42,6 @@ fi
 # handy ls alias
 alias ll='ls -l --classify --human-readable'
 
-# Add alias to use Python 3 by default
-alias python='python3'
-
 alias ip='ip --color'
 
 # enable programmable completion features (you don't need to enable
