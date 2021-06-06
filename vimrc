@@ -22,6 +22,14 @@ Bundle 'gmarik/vundle'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
 
+" show error when formatter fails
+let g:autoformat_verbosemode=1
+
+" disable fallbacks when formatter fails
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+
 " bind Autoformat (black, rustfmt, etc.) to F12
 nnoremap <F12> :Autoformat<CR>
 
