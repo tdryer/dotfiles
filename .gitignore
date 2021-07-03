@@ -4,4 +4,6 @@ xmonad.hi
 xmonad.o
 vim/bundle/
 vim/spell/
+vim/view/
 pip/pip.log
+.netrwhist
