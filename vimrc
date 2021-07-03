@@ -84,8 +84,9 @@ let g:airline_section_y = ''        " hide file encoding
 
 " remove ugly symbols
 let g:airline_symbols = {}
-let g:airline_symbols.linenr = ':'
+let g:airline_symbols.linenr = ' '
 let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.colnr = ' '
 
 " enable spell checking
 set spell
