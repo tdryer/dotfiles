@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
     Bundle 'vim-airline/vim-airline'
     Bundle 'vim-airline/vim-airline-themes'
     Bundle 'tpope/vim-surround'
-    Bundle 'altercation/vim-colors-solarized'
+    Bundle 'lifepillar/vim-solarized8'
     Bundle 'rust-lang/rust.vim'
     Bundle 'ledger/vim-ledger'
     Bundle 'lifepillar/vim-mucomplete'
@@ -98,8 +98,15 @@ set spellcapcheck=""
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprev<CR>
 
+" enable true colour
+set termguicolors
+
+" workaround for true colour in tmux
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 " make save/quit work while accidentally pressing shift
 cabbr Q quit
