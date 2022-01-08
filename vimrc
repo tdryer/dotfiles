@@ -161,8 +161,9 @@ set nojoinspaces
 " keep 5 lines of context above and below the cursor
 set scrolloff=5
 
-" indicate tabs
+" indicate tabs without changing background colour
 set list listchars=tab:→\ 
+hi SpecialKey ctermbg=NONE guibg=NONE
 
 " enable search highlighting
 set hlsearch
