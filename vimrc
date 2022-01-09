@@ -8,8 +8,6 @@ Bundle 'gmarik/vundle'
     Bundle 'junegunn/fzf'
     Bundle 'benekastah/neomake'
     Bundle 'bitc/vim-bad-whitespace'
-    Bundle 'vim-airline/vim-airline'
-    Bundle 'vim-airline/vim-airline-themes'
     Bundle 'tpope/vim-surround'
     Bundle 'lifepillar/vim-solarized8'
     Bundle 'rust-lang/rust.vim'
@@ -67,27 +65,6 @@ map <C-P> :FZF<CR>
 let g:neomake_error_sign = { 'text': '➔', 'texthl': 'error' }
 let g:neomake_warning_sign = { 'text': '➔', 'texthl': 'todo' }
 
-" set airline theme
-let g:airline_theme='luna'
-
-" hide airline section separators
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
-" only enable the airline extensions I want
-let g:airline_extensions = ['neomake']
-
-" hide most status line clutter
-let g:airline_section_a = ''        " hide mode indicator
-let g:airline_section_x = ''        " hide filetype
-let g:airline_section_y = ''        " hide file encoding
-
-" remove ugly symbols
-let g:airline_symbols = {}
-let g:airline_symbols.linenr = ' '
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.colnr = ' '
-
 " enable spell checking
 set spell
 
@@ -129,6 +106,18 @@ set backupdir=~/.cache/vim/backup
 set directory=~/.cache/vim/swap
 
 set laststatus=2   " Always show the statusline
+
+" statusline contents
+set statusline=
+set statusline+=%f " filename
+set statusline+=%m " modified flag
+set statusline+=%h " help buffer flag
+set statusline+=%r " read-only flag
+set statusline+=%= " align right
+set statusline+=%p%% " percentage through file
+set statusline+=\ %l/%L " line number / number of lines
+set statusline+=\ %c " column number
+
 set encoding=utf-8 " Necessary to show Unicode glyphs
 set t_Co=256 " Explicitly tell Vim that the terminal supports 256 colors
 
