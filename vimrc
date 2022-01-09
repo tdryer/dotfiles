@@ -96,6 +96,10 @@ syntax on
 " highlight the current line
 set cursorline
 
+" override colour scheme for misspelled words
+highlight clear SpellBad
+highlight SpellBad   gui=undercurl cterm=underline
+
 " make backspace work as expected
 set backspace=indent,eol,start
 
