@@ -92,3 +92,9 @@ export $(gnome-keyring-daemon --start)
 
 # Tell fzf to use ag to list files.
 export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
+
+# Enable kitty shell integration
+if test -n "$KITTY_INSTALLATION_DIR"; then
+    export KITTY_SHELL_INTEGRATION="enabled"
+    source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"
+fi
