@@ -136,9 +136,6 @@ set timeoutlen=200
 " use the X clipboard (requires vim from vim-gnome package for xterm_clipboard support
 set clipboard=unnamedplus
 
-" for python files, draw line at margin
-autocmd FileType python setlocal colorcolumn=79 | highlight ColorColumn guibg=orange
-
 " for html, javascript, css, proto, yaml use 2 space indent
 autocmd Filetype html,javascript,css,proto,yaml
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
