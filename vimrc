@@ -177,6 +177,9 @@ set softtabstop=4
 " auto indent
 set autoindent
 
+" continue visual indent for wrapped lines
+set breakindent
+
 " show line numbers
 set number
 
