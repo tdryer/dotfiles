@@ -44,6 +44,9 @@ alias ll='ls -l --classify --human-readable'
 
 alias ip='ip --color'
 
+# workaround for remote hosts not having kitty terminfo
+alias ssh='TERM=xterm-256color ssh'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
