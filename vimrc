@@ -180,6 +180,9 @@ set autoindent
 " continue visual indent for wrapped lines
 set breakindent
 
+" add hanging indent for lists detected by formatlistpat
+set breakindentopt=list:-1
+
 " show line numbers
 set number
 
