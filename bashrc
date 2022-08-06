@@ -95,3 +95,10 @@ export $(gnome-keyring-daemon --start)
 
 # Tell fzf to use ag to list files.
 export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
+
+# If using kitty, override ctrl+l to clear the screen while keeping its
+# contents in scrollback buffer, emulating the behaviour of gnome-terminal.
+# See https://github.com/kovidgoyal/kitty/issues/1113.
+if [ $TERM = "xterm-kitty" ]; then
+    bind -x '"\C-l": printf "\n%.0s" $(seq 2 $LINES); printf "\e[H\e[2J"'
+fi
