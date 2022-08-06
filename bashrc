@@ -44,9 +44,6 @@ alias ll='ls -l --classify --human-readable'
 
 alias ip='ip --color'
 
-# workaround for remote hosts not having kitty terminfo
-alias ssh='TERM=xterm-256color ssh'
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -96,9 +93,12 @@ export $(gnome-keyring-daemon --start)
 # Tell fzf to use ag to list files.
 export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
 
-# If using kitty, override ctrl+l to clear the screen while keeping its
-# contents in scrollback buffer, emulating the behaviour of gnome-terminal.
-# See https://github.com/kovidgoyal/kitty/issues/1113.
 if [ $TERM = "xterm-kitty" ]; then
+    # If using kitty, override ctrl+l to clear the screen while keeping its
+    # contents in scrollback buffer, emulating the behaviour of gnome-terminal.
+    # See https://github.com/kovidgoyal/kitty/issues/1113.
     bind -x '"\C-l": printf "\n%.0s" $(seq 2 $LINES); printf "\e[H\e[2J"'
+
+    # Work around remote hosts not having kitty terminfo.
+    alias ssh='TERM=xterm-256color ssh'
 fi
