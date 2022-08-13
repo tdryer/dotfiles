@@ -1,0 +1,5 @@
+set history save on
+set history size 1000
+set history filename ~/.local/share/gdb_history
+
+set pagination off
