@@ -5,4 +5,6 @@
 # allow 'e' variable for exceptions
 good-names=e
 
+score=n
 
+disable=missing-function-docstring,missing-class-docstring,missing-module-docstring,invalid-name
