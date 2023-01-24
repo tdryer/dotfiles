@@ -140,6 +140,9 @@ set clipboard=unnamedplus
 autocmd Filetype html,javascript,css,proto,yaml
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+" for go, use 2 space tab indentation
+autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 nolist
+
 " for text files, wrap lines on word boundary
 autocmd FileType text,markdown setlocal linebreak
 
