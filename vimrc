@@ -23,8 +23,9 @@ filetype plugin indent on
 " show error when formatter fails
 let g:autoformat_verbosemode=1
 
-" only enable a single python formatter
+" set enabled formatters
 let g:formatters_python = ['black']
+let g:formatters_go = ['gofmt_2']
 
 " disable fallbacks when formatter fails
 let g:autoformat_autoindent = 0
