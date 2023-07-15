@@ -94,10 +94,10 @@ export $(gnome-keyring-daemon --start)
 export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
 
 if [ $TERM = "xterm-kitty" ]; then
-    # If using kitty, override ctrl+l to clear the screen while keeping its
-    # contents in scrollback buffer, emulating the behaviour of gnome-terminal.
-    # See https://github.com/kovidgoyal/kitty/issues/1113.
-    bind -x '"\C-l": printf "\n%.0s" $(seq 2 $LINES); printf "\e[H\e[2J"'
+    # Override ctrl+l to use kitty escape code to clear the screen while
+    # keeping its contents in scrollback buffer, emulating the behaviour of
+    # gnome-terminal.
+    bind -x '"\C-l": printf "\e[H\e[22J"'
 
     # Work around remote hosts not having kitty terminfo.
     alias ssh='TERM=xterm-256color ssh'
