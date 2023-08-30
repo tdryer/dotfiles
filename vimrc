@@ -141,6 +141,9 @@ set clipboard=unnamedplus
 autocmd Filetype html,javascript,css,proto,yaml
     \ setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
+" for yaml, don't indent line when inserting comment
+autocmd FileType yaml setlocal indentkeys-=0#
+
 " for go, use 2 space tab indentation
 autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 nolist
 
