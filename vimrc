@@ -17,8 +17,13 @@ Bundle 'gmarik/vundle'
     Bundle 'Vimjas/vim-python-pep8-indent'
     Bundle 'tpope/vim-markdown'
     Bundle 'Chiel92/vim-autoformat'
+    Bundle 'dkarter/bullets.vim'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
+
+" bullets.vim
+let g:bullets_outline_levels = ['num', 'abc', 'std*']
+let g:bullets_nested_checkboxes = 0
 
 " show error when formatter fails
 let g:autoformat_verbosemode=1
