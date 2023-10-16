@@ -24,9 +24,6 @@ filetype plugin indent on
 " bullets.vim
 let g:bullets_outline_levels = ['num', 'abc', 'std*']
 let g:bullets_nested_checkboxes = 0
-" allow inserting item on line above cursor
-" https://github.com/dkarter/bullets.vim/issues/110
-let g:bullets_custom_mappings = [['nmap', 'O', 'k<Plug>(bullets-newline)']]
 
 " show error when formatter fails
 let g:autoformat_verbosemode=1
