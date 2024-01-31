@@ -15,8 +15,20 @@ Bundle 'gmarik/vundle'
     Bundle 'tpope/vim-markdown'
     Bundle 'Chiel92/vim-autoformat'
     Bundle 'dkarter/bullets.vim'
+    Bundle 'prabirshrestha/vim-lsp'
 filetype plugin indent on
 " END Vundle ---------------------------------------------
+
+let g:lsp_document_code_action_signs_enabled = 0
+
+" enable gopls language server
+if executable('gopls')
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'gopls',
+        \ 'cmd': {server_info->['gopls']},
+        \ 'allowlist': ['go'],
+        \ })
+endif
 
 " bullets.vim
 let g:bullets_outline_levels = ['num', 'abc', 'std*']
@@ -57,9 +69,19 @@ set shortmess+=c
 " disable bell caused by ins-completion
 set belloff+=ctrlg
 
-" enable autocompletion using mucomplete and ins-completion
+" enable mucomplete
 let g:mucomplete#enable_auto_at_startup = 1
-let g:mucomplete#chains = { 'default': ['c-n'] }
+
+" use keyword completion by default except where vim-lsp is available
+" falling back from omni (vim-lsp) to c-n doesn't seem to work
+let g:mucomplete#chains = {
+\   'default': ['c-n'],
+\   'go': {
+\     'default': ['omni'],
+\     'goComment': ['c-n'],
+\     'goString': ['c-n'],
+\   }
+\ }
 
 " run FZF on ctrl-p
 map <C-P> :FZF<CR>
@@ -148,6 +170,9 @@ autocmd FileType yaml setlocal indentkeys-=0#
 
 " for go, use 2 space tab indentation
 autocmd FileType go setlocal noexpandtab tabstop=4 shiftwidth=4 nolist
+
+" for go, enable vim-lsp completion
+autocmd FileType go setlocal omnifunc=lsp#complete
 
 " for text files, wrap lines on word boundary
 autocmd FileType text,markdown setlocal linebreak
