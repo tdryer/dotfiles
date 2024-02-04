@@ -7,3 +7,4 @@ vim/spell/
 vim/view/
 pip/pip.log
 .netrwhist
+config/nvim/spell/
