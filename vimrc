@@ -86,10 +86,6 @@ let g:mucomplete#chains = {
 " run FZF on ctrl-p
 map <C-P> :FZF<CR>
 
-" set appearance of Neomake signs
-let g:neomake_error_sign = { 'text': '➔', 'texthl': 'error' }
-let g:neomake_warning_sign = { 'text': '➔', 'texthl': 'todo' }
-
 " enable spell checking
 set spell
 
