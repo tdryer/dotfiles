@@ -9,3 +9,5 @@
 	graph = log --graph --all --decorate --oneline
 [push]
 	default = simple
+[commit]
+	verbose = true
