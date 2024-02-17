@@ -102,3 +102,5 @@ if [ $TERM = "xterm-kitty" ]; then
     # Work around remote hosts not having kitty terminfo.
     alias ssh='TERM=xterm-256color ssh'
 fi
+
+alias vim='nvim'
