@@ -1,4 +1,5 @@
 -- insert bullets when starting new line
+-- use C-U to cancel, C-T to indent, C-D to outdent
 vim.opt_local.comments = {
     "b:* [ ]",
     "b:* [X]",
