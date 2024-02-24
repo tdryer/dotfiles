@@ -40,3 +40,4 @@ vim.opt.linebreak = true
 require('mini.completion').setup()
 vim.keymap.set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
 vim.keymap.set("n", "<F12>", vim.lsp.buf.format)
+vim.opt.matchpairs:append("<:>")
