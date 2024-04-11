@@ -11,3 +11,7 @@ vim.lsp.start({
         vim.api.nvim_buf_set_option(bufnr, "formatexpr", "")
     end,
 })
+vim.g.python_indent = {
+    open_paren = vim.bo.shiftwidth,
+    closed_paren_align_last_line = false,
+}
