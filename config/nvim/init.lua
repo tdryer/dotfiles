@@ -41,3 +41,7 @@ require('mini.completion').setup()
 vim.keymap.set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
 vim.keymap.set("n", "<F12>", vim.lsp.buf.format)
 vim.opt.matchpairs:append("<:>")
+vim.g.python_indent = {
+    open_paren = "shiftwidth()",
+    closed_paren_align_last_line = false,
+}
