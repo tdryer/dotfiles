@@ -5,6 +5,7 @@ vim.lsp.start({
     settings = { pylsp = { plugins = { ruff = {
         enabled = true,
         extendSelect = { 'ARG' },
+        format = { 'I' },
     } } } },
     on_attach = function(client, bufnr)
         -- Do not use lsp for `gq` formatting
