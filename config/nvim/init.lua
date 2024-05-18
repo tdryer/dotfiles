@@ -12,7 +12,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.cursorline = true
 vim.opt.tabstop = 4
-vim.opt.termguicolors = true
 vim.opt.statusline = " %f%m%h%r%=%p%% %l/%L %c "
 vim.g.solarized_statusline = "flat"
 vim.opt.scrolloff = 5
