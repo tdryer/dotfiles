@@ -13,3 +13,5 @@ vim.opt_local.comments = {
 vim.opt_local.formatoptions:append("ro")
 vim.api.nvim_set_hl(0, "markdownCode", { link="String" })
 vim.api.nvim_set_hl(0, "markdownCodeBlock", { link="String" })
+vim.treesitter.start()
+vim.opt_local.conceallevel = 2
