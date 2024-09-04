@@ -1,7 +1,7 @@
 -- install: pip install ruff
 vim.lsp.start({
     name = 'ruff',
-    cmd = { 'ruff', 'server', '--preview' },
+    cmd = { 'ruff', 'server' },
     init_options = {
         settings = {
             lint = {
