@@ -2,6 +2,7 @@ require "paq" {
   "bitc/vim-bad-whitespace",
   "echasnovski/mini.completion",
   "junegunn/fzf",
+  "junegunn/fzf.vim",
   "ledger/vim-ledger",
   "lifepillar/vim-solarized8",
   "savq/paq-nvim",
@@ -25,7 +26,12 @@ vim.opt.softtabstop = 4
 vim.opt.signcolumn = "no"
 vim.keymap.set("n", "<Space>", ":nohlsearch<CR>")
 vim.cmd.colorscheme("solarized8")
-vim.keymap.set("n", "<C-P>", ":FZF<CR>")
+vim.keymap.set("n", "<C-P>", ":Files<CR>")
+vim.keymap.set("n", "<C-O>", ":RG<CR>")
+vim.g.fzf_vim = {
+    preview_window = { "up" },
+    grep_multi_line = 1,
+}
 vim.keymap.set("n", "tk", ":tabnext<CR>")
 vim.keymap.set("n", "tj", ":tabprev<CR>")
 vim.keymap.set("v", "<", "<gv") -- repeated outdent in visual mode
