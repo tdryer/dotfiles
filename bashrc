@@ -85,11 +85,6 @@ function camera-open() {
 # prevent accidentally closing shell by requiring ctrl+d twice consecutively to exit
 export IGNOREEOF=1
 
-# Set environment variables to allow access to the gnome-keyring-daemon started
-# and unlocked by PAM. Previously I was doing this in xprofile, but that
-# doesn't work correctly because dbus isn't running at that point.
-export $(gnome-keyring-daemon --start)
-
 # Tell fzf to use ag to list files.
 export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
 
