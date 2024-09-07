@@ -16,5 +16,8 @@ vim.opt_local.formatoptions:append("ro")
 vim.opt_local.formatoptions:remove("q")
 vim.api.nvim_set_hl(0, "markdownCode", { link="String" })
 vim.api.nvim_set_hl(0, "markdownCodeBlock", { link="String" })
-vim.treesitter.start()
+-- treesitter is too slow for very large files
+if vim.api.nvim_buf_line_count(0) < 10000 then
+    vim.treesitter.start()
+end
 vim.opt_local.conceallevel = 2
