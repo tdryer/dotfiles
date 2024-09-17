@@ -28,6 +28,12 @@ vim.keymap.set("n", "<Space>", ":nohlsearch<CR>")
 vim.cmd.colorscheme("solarized8")
 vim.keymap.set("n", "<C-P>", ":Files<CR>")
 vim.keymap.set("n", "<C-O>", ":RG<CR>")
+vim.g.fzf_layout = {
+    window = {
+        width = 0.9,
+        height = 0.9,
+    }
+}
 vim.g.fzf_vim = {
     preview_window = { "up" },
     grep_multi_line = 1,
