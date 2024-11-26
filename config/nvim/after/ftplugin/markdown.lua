@@ -20,4 +20,3 @@ vim.api.nvim_set_hl(0, "markdownCodeBlock", { link="String" })
 if vim.api.nvim_buf_line_count(0) < 10000 then
     vim.treesitter.start()
 end
-vim.opt_local.conceallevel = 2
