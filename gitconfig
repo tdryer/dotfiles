@@ -3,6 +3,15 @@
 	path = ~/.gitconfig.private
 [core]
 	editor = vim
+[branch]
+	sort = -committerdate
+[column]
+	ui = auto
+[tag]
+	sort = -version:refname
+[diff]
+	algorithm = histogram
+	renames = true
 [color]
 	ui = true
 [alias]
