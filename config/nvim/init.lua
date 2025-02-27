@@ -1,11 +1,11 @@
 require "paq" {
   "bitc/vim-bad-whitespace",
-  "echasnovski/mini.completion",
   "junegunn/fzf",
   "junegunn/fzf.vim",
   "ledger/vim-ledger",
   "lifepillar/vim-solarized8",
   "savq/paq-nvim",
+  "ggml-org/llama.vim",
 }
 
 vim.opt.number = true
@@ -48,8 +48,6 @@ vim.api.nvim_set_hl(0, "SpellBad", { undercurl=true })
 vim.opt.breakindent = true -- indent wrapped lines
 vim.opt.breakindentopt = "list:-1" -- hanging indent for lists
 vim.opt.linebreak = true
-require('mini.completion').setup()
-vim.keymap.set('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], { expr = true })
 vim.keymap.set("n", "<F12>", vim.lsp.buf.format)
 vim.opt.matchpairs:append("<:>")
 vim.g.python_indent = {
