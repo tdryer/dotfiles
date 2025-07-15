@@ -1,8 +1,6 @@
 [include]
 	# for user and github config
 	path = ~/.gitconfig.private
-[core]
-	editor = vim
 [branch]
 	sort = -committerdate
 [tag]
