@@ -75,13 +75,6 @@ esac
 # use .pystartup for python repl
 export PYTHONSTARTUP=~/.pystartup
 
-# automatically open gphoto camera in file browser
-function camera-open() {
-    camera=gphoto2://\[$(gphoto2 --auto-detect | grep -Eo usb:[0-9]+,[0-9]+)\]
-    echo "Opening camera $camera..."
-    xdg-open $camera
-}
-
 # prevent accidentally closing shell by requiring ctrl+d twice consecutively to exit
 export IGNOREEOF=1
 
