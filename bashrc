@@ -92,3 +92,6 @@ if [ $TERM = "xterm-kitty" ]; then
 fi
 
 alias vim='nvim'
+
+# List TCP or UDP listing ports, excluding localhost
+alias open-ports='sudo ss -lnptu "! ( src 127.0.0.0/8 or src [::1] )"'
