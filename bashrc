@@ -72,9 +72,6 @@ xterm*|rxvt*)
     ;;
 esac
 
-# use .pystartup for python repl
-export PYTHONSTARTUP=~/.pystartup
-
 # prevent accidentally closing shell by requiring ctrl+d twice consecutively to exit
 export IGNOREEOF=1
 
