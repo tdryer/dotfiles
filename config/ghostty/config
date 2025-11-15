@@ -1,0 +1,25 @@
+font-family = "Ubuntu Mono"
+font-variation = "wght=473"
+font-size = 11
+
+theme = "Builtin Solarized Dark"
+
+keybind = ctrl+b>c=new_tab
+keybind = ctrl+b>1=goto_tab:1
+keybind = ctrl+b>2=goto_tab:2
+keybind = ctrl+b>3=goto_tab:3
+keybind = ctrl+b>4=goto_tab:4
+keybind = ctrl+b>5=goto_tab:5
+keybind = ctrl+b>6=goto_tab:6
+keybind = ctrl+b>7=goto_tab:7
+keybind = ctrl+b>8=goto_tab:8
+keybind = ctrl+b>9=goto_tab:9
+
+keybind = ctrl+b>v=new_split:right
+keybind = ctrl+b>s=new_split:down
+keybind = ctrl+b>h=goto_split:left
+keybind = ctrl+b>j=goto_split:bottom
+keybind = ctrl+b>k=goto_split:top
+keybind = ctrl+b>l=goto_split:right
+
+keybind = ctrl+b>g=jump_to_prompt:-1
