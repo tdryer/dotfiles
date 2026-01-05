@@ -45,6 +45,8 @@ vim.keymap.set("v", ">", ">gv") -- repeated indent in visual mode
 vim.opt.spell = true
 vim.opt.spellcapcheck = ""
 vim.api.nvim_set_hl(0, "SpellBad", { undercurl=true })
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextError", { fg = "#dc322f" }) -- red
+vim.api.nvim_set_hl(0, "DiagnosticVirtualTextWarn", { fg = "#60512e" }) -- dim yellow
 vim.opt.breakindent = true -- indent wrapped lines
 vim.opt.breakindentopt = "list:-1" -- hanging indent for lists
 vim.opt.linebreak = true
