@@ -16,7 +16,7 @@ vim.opt.tabstop = 4
 vim.opt.statusline = " %f%m%h%r%=%p%% %l/%L %c "
 vim.g.solarized_statusline = "flat"
 vim.opt.scrolloff = 5
-vim.opt.clipboard = "unnamedplus" -- requires `xsel`
+vim.opt.clipboard = "unnamedplus" -- requires `wl-clipboard` (Wayland) or `xsel` (X11)
 vim.opt.modeline = false -- security
 vim.opt.list = true
 vim.opt.listchars = { tab="→ " }
