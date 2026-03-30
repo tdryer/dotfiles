@@ -1,12 +1,11 @@
-require "paq" {
-  "bitc/vim-bad-whitespace",
-  "junegunn/fzf",
-  "junegunn/fzf.vim",
-  "ledger/vim-ledger",
-  "lifepillar/vim-solarized8",
-  "savq/paq-nvim",
-  "ggml-org/llama.vim",
-}
+vim.pack.add({
+    "https://github.com/bitc/vim-bad-whitespace",
+    "https://github.com/junegunn/fzf",
+    "https://github.com/junegunn/fzf.vim",
+    "https://github.com/ledger/vim-ledger",
+    "https://github.com/lifepillar/vim-solarized8",
+    "https://github.com/ggml-org/llama.vim",
+})
 
 vim.opt.number = true
 vim.opt.ignorecase = true

@@ -1,0 +1,28 @@
+{
+  "plugins": {
+    "fzf": {
+      "rev": "fff7eda9d76209e7e07f87ad3a116952297492a2",
+      "src": "https://github.com/junegunn/fzf"
+    },
+    "fzf.vim": {
+      "rev": "34a564c81f36047f50e593c1656f4580ff75ccca",
+      "src": "https://github.com/junegunn/fzf.vim"
+    },
+    "llama.vim": {
+      "rev": "a1c8e6e40cb45df59b78add5b65d575386832465",
+      "src": "https://github.com/ggml-org/llama.vim"
+    },
+    "vim-bad-whitespace": {
+      "rev": "51aca6d383fe277627794e1b84f7d2a93cbd4c18",
+      "src": "https://github.com/bitc/vim-bad-whitespace"
+    },
+    "vim-ledger": {
+      "rev": "4f2d93dd914f625e2d3db47d97bd9f428fedd68f",
+      "src": "https://github.com/ledger/vim-ledger"
+    },
+    "vim-solarized8": {
+      "rev": "4433b4411de92b2446a4d32f0d8bf1b25c476bf9",
+      "src": "https://github.com/lifepillar/vim-solarized8"
+    }
+  }
+}

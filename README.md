@@ -16,3 +16,17 @@ dotfiles --sync --force
 ```
 
 Run `:BundleInstall` in Vim to have Vundle install Vim plugins.
+
+## Neovim Plugins
+
+### Update
+
+```
+:lua vim.pack.update()
+```
+
+### Remove
+
+```
+lua vim.pack.del({ 'plugin-name' })
+```
