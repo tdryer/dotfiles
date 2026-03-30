@@ -6,6 +6,14 @@ vim.pack.add({
     "https://github.com/lifepillar/vim-solarized8",
     "https://github.com/ggml-org/llama.vim",
 })
+vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
+vim.api.nvim_create_user_command("PackAutoDelete", function()
+    local names = vim.iter(vim.pack.get(nil, {info = false}))
+        :filter(function(p) return not p.active end)
+        :map(function(p) return p.spec.name end)
+        :totable()
+    if #names > 0 then vim.pack.del(names) end
+end, {})
 
 vim.opt.number = true
 vim.opt.ignorecase = true
