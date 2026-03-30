@@ -92,18 +92,3 @@ alias vim='nvim'
 
 # List TCP or UDP listing ports, excluding localhost
 alias open-ports='sudo ss -lnptu "! ( src 127.0.0.0/8 or src [::1] )"'
-
-# Convert markdown to html and open in browser
-md2html() {
-    if [ -z "$1" ]; then
-        echo "Usage: md2html <input.md> [output.html]"
-        return 1
-    fi
-    local input="$1"
-    local output="${2:-$(mktemp /tmp/md2html_XXXXXX.html)}"
-    local css="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.8.1/github-markdown.min.css"
-    local style="box-sizing: border-box; min-width: 200px; max-width: 980px; margin: 0 auto; padding: 45px;"
-    pandoc --standalone --css "$css" --metadata title="$(basename "$input")" "$input" | \
-        sed "s/<body>/<body class=\"markdown-body\" style=\"$style\">/" > "$output" && \
-        open "$output"
-}
