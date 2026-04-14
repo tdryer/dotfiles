@@ -14,9 +14,10 @@ vim.opt_local.comments = {
 vim.opt_local.formatoptions:append("ro")
 -- don't auto-wrap text with comment prefixes
 vim.opt_local.formatoptions:remove("q")
-vim.api.nvim_set_hl(0, "markdownCode", { link="String" })
-vim.api.nvim_set_hl(0, "markdownCodeBlock", { link="String" })
+vim.api.nvim_set_hl(0, "markdownCode", { link="Special" })
+vim.api.nvim_set_hl(0, "markdownCodeBlock", { link="Special" })
+vim.api.nvim_set_hl(0, "markdownListMarker", { link="Special" })
 -- treesitter is too slow for very large files
-if vim.api.nvim_buf_line_count(0) < 10000 then
-    vim.treesitter.start()
+if vim.api.nvim_buf_line_count(0) > 10000 then
+    vim.treesitter.stop()
 end
