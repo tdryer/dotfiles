@@ -1,0 +1,26 @@
+{
+  "network": {
+    "allowedDomains": [
+      "pypi.org",
+      "files.pythonhosted.org",
+      "openrouter.ai",
+      "index.crates.io",
+      "static.crates.io",
+      "static.rust-lang.org"
+    ]
+  },
+  "filesystem": {
+    "allowWrite": [
+      "~/.cache/opencode/",
+      "~/.config/",
+      "~/.config/opencode/",
+      "~/.local/share/opencode/",
+      "~/.local/state/opencode/",
+      "~/.cache/uv/",
+      "~/.local/share/uv/",
+      "~/.cargo",
+      "~/.rustup",
+      "."
+    ]
+  }
+}
