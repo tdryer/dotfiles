@@ -5,6 +5,7 @@ font-size = 11
 theme = "iTerm2 Solarized Dark"
 
 adjust-cursor-thickness = 3
+adjust-underline-thickness = -1
 mouse-hide-while-typing = true
 
 clipboard-read = "allow"
