@@ -7,6 +7,7 @@ theme = "iTerm2 Solarized Dark"
 adjust-cursor-thickness = 3
 adjust-underline-thickness = -1
 mouse-hide-while-typing = true
+mouse-scroll-multiplier = 1
 
 clipboard-read = "allow"
 app-notifications = "no-clipboard-copy"
