@@ -11,5 +11,3 @@ mouse-scroll-multiplier = 1
 
 clipboard-read = "allow"
 app-notifications = "no-clipboard-copy"
-
-custom-shader = shaders/cursor.glsl
