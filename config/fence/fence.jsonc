@@ -13,12 +13,9 @@
   },
   "filesystem": {
     "defaultDenyRead": true,
-    "allowRead": [
-      "~/.config/" // workaround for opencode
-    ],
     "allowWrite": [
       "~/.cache/opencode/",
-      "~/.config/opencode/",
+      "~/.config/opencode",
       "~/.local/share/opencode/",
       "~/.local/state/opencode/",
       "~/.cache/uv/",
