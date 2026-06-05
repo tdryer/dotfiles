@@ -23,6 +23,15 @@
       }
     }
   },
+  "agent": {
+    "build-with-ask": {
+      "permission": {
+        "bash": {
+          "*": "ask"
+        }
+      }
+    }
+  },
   "permission": {
     "external_directory": {
       "~/.cargo/registry/src/**": "allow"
