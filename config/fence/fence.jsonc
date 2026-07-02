@@ -8,13 +8,18 @@
       "openrouter.ai",
       "index.crates.io",
       "static.crates.io",
-      "static.rust-lang.org"
+      "static.rust-lang.org",
+      "proxy.golang.org",
+      "golang.org",
+      "storage.googleapis.com",
+      "sum.golang.org"
     ]
   },
   "filesystem": {
     "defaultDenyRead": true,
     "allowGitConfig": true,
     "allowWrite": [
+      "~/.cache/go-build",
       "~/.cache/opencode/",
       "~/.config/opencode",
       "~/.local/share/opencode/",
@@ -23,6 +28,7 @@
       "~/.local/share/uv/",
       "~/.cargo",
       "~/.rustup",
+      "~/go",
       "."
     ]
   }
