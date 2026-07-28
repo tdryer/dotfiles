@@ -93,6 +93,8 @@ alias vim='nvim'
 # List TCP or UDP listing ports, excluding localhost
 alias open-ports='sudo ss -lnptu "! ( src 127.0.0.0/8 or src [::1] )"'
 
-# Sandbox opencode by default and work around it trying and failing to create
-# the config directory in the sandbox when it is a symlink.
-alias opencode='XDG_CONFIG_HOME=~/Dotfiles/config fence -- opencode'
+# Run following command in `nono` sandbox with `agent` profile.
+alias sb='nono run --profile agent --allow-cwd --silent --'
+
+# Sandbox `opencode` by default.
+alias opencode='sb opencode'

@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "name": "agent"
+  },
+  "groups": {
+    "exclude": [
+      "dangerous_commands"
+    ]
+  },
+  "workdir": {
+    "access": "readwrite"
+  },
+  "filesystem": {
+    "allow": [
+      "/tmp",
+      "~/.cache/go-build",
+      "~/.cache/opencode",
+      "~/.cache/uv",
+      "~/.cargo",
+      "~/.config/opencode",
+      "~/.local/share/nvim",
+      "~/.local/share/opencode",
+      "~/.local/share/opentui",
+      "~/.local/share/uv",
+      "~/.local/state/nvim",
+      "~/.local/state/opencode",
+      "~/.rustup",
+      "~/go"
+    ],
+    "read": [
+      "/opt/kitty/lib/kitty/terminfo",
+      "~/.config/uv",
+      "~/Dotfiles/config"
+    ]
+  },
+  "network": {
+    "allow_domain": [
+      "api.github.com",
+      "files.pythonhosted.org",
+      "golang.org",
+      "index.crates.io",
+      "openrouter.ai",
+      "proxy.golang.org",
+      "pypi.org",
+      "static.crates.io",
+      "static.rust-lang.org",
+      "storage.googleapis.com",
+      "sum.golang.org"
+    ]
+  }
+}
