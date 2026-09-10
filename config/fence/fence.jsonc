@@ -1,5 +1,9 @@
 {
   "allowPty": true,
+  "command": {
+    // silence irrelevant warning
+    "acceptSharedBinaryCannotRuntimeDeny": ["chroot"]
+  },
   "network": {
     "allowedDomains": [
       "api.github.com",
