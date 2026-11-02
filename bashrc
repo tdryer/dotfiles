@@ -61,7 +61,13 @@ color_prompt=yes
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_STATESEPARATOR=""
 PROMPT_COMMAND='hasjobs=$(jobs -p)'
-PS1='${hasjobs:+(\j)}$(__git_ps1 "(%s)")\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# Show user@host in magenta instead of green in the dotbox VM.
+if [ "$HOSTNAME" = dotbox ]; then
+    host_color='01;35'
+else
+    host_color='01;32'
+fi
+PS1='${hasjobs:+(\j)}$(__git_ps1 "(%s)")\[\033['$host_color'm\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # if this is an xterm set the title to user@host:dir
 case "$TERM" in
