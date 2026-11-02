@@ -7,6 +7,9 @@
       "dangerous_commands"
     ]
   },
+  "linux": {
+    "af_unix_mediation": "pathname"
+  },
   "workdir": {
     "access": "readwrite"
   },
@@ -30,7 +33,12 @@
     "read": [
       "/opt/kitty/lib/kitty/terminfo",
       "~/.config/uv",
-      "~/Dotfiles/config"
+      "~/Dotfiles/config",
+      "/usr/libexec"
+    ],
+    "read_file": [
+      "~/.gitconfig",
+      "~/.gitconfig.private"
     ]
   },
   "network": {
