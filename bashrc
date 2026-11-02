@@ -98,3 +98,7 @@ alias sb='nono run --profile agent --allow-cwd --silent --'
 
 # Sandbox `opencode` by default.
 alias opencode='sb opencode'
+
+alias copilot='printf "%s\n" "Error: copilot requires sandbox" >&2; false'
+
+alias codex='AZURE_OPENAI_API_KEY=$(secret-tool lookup service azure-openai-key) /usr/bin/codex'
