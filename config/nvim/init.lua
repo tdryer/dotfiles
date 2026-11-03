@@ -30,7 +30,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.cursorline = true
 vim.opt.tabstop = 4
-vim.opt.statusline = " %f%m%h%r%=%p%% %l/%L %c "
+vim.opt.statusline = " %f%m%h%r%=%{% v:lua.vim.diagnostic.status() %} %p%% %l/%L %c "
 vim.g.solarized_statusline = "flat"
 vim.opt.scrolloff = 5
 vim.g.clipboard = "osc52"
