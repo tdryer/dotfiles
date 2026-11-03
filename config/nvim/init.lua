@@ -67,3 +67,4 @@ vim.g.python_indent = {
 vim.keymap.set("ca", "W", "write")
 vim.keymap.set("ca", "Q", "quit")
 vim.diagnostic.config({ virtual_text = true })
+vim.lsp.enable({ "clangd", "gopls", "ruff", "rust_analyzer" })

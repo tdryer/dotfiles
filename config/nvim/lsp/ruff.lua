@@ -1,10 +1,8 @@
 -- install: pip install ruff
-vim.lsp.start({
-    name = 'ruff',
+return {
     cmd = { 'ruff', 'server' },
-    root_dir = vim.fs.dirname(
-        vim.fs.find({ 'pyproject.toml', 'setup.py', '.git' }, { upward = true })[1]
-    ),
+    filetypes = { 'python' },
+    root_markers = { 'pyproject.toml', 'setup.py', '.git' },
     init_options = {
         settings = {
             lint = {
@@ -16,4 +14,4 @@ vim.lsp.start({
         -- Do not use lsp for `gq` formatting (wrapping lines)
         vim.bo[bufnr].formatexpr = ""
     end,
-})
+}
