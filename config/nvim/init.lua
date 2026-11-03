@@ -15,6 +15,16 @@ vim.api.nvim_create_user_command("PackAutoDelete", function()
 end, {})
 
 vim.opt.autocomplete = true
+vim.opt.complete:prepend("o") -- include omnifunc (LSP) completions
+vim.api.nvim_create_autocmd("LspAttach", {
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client:supports_method("textDocument/completion") then
+            -- apply auto-imports, snippets, etc. when accepting with <C-Y>
+            vim.lsp.completion.enable(true, client.id, args.buf)
+        end
+    end,
+})
 vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
