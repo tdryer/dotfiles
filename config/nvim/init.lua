@@ -14,6 +14,7 @@ vim.api.nvim_create_user_command("PackAutoDelete", function()
     if #names > 0 then vim.pack.del(names) end
 end, {})
 
+vim.opt.autocomplete = true
 vim.opt.number = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
