@@ -42,10 +42,10 @@ vim.opt.expandtab = true
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.signcolumn = "no"
-vim.keymap.set("n", "<Space>", ":nohlsearch<CR>")
+vim.keymap.set("n", "<Space>", "<Cmd>nohlsearch<CR>")
 vim.cmd.colorscheme("solarized8")
-vim.keymap.set("n", "<C-P>", ":Files<CR>")
-vim.keymap.set("n", "<C-O>", ":RG<CR>")
+vim.keymap.set("n", "<C-P>", "<Cmd>Files<CR>")
+vim.keymap.set("n", "<C-O>", "<Cmd>RG<CR>")
 vim.g.fzf_layout = {
     window = {
         width = 0.9,
@@ -56,8 +56,8 @@ vim.g.fzf_vim = {
     preview_window = { "up" },
     grep_multi_line = 1,
 }
-vim.keymap.set("n", "tk", ":tabnext<CR>")
-vim.keymap.set("n", "tj", ":tabprev<CR>")
+vim.keymap.set("n", "tk", "<Cmd>tabnext<CR>")
+vim.keymap.set("n", "tj", "<Cmd>tabprev<CR>")
 vim.keymap.set("v", "<", "<gv") -- repeated outdent in visual mode
 vim.keymap.set("v", ">", ">gv") -- repeated indent in visual mode
 vim.opt.spell = true
