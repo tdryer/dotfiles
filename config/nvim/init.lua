@@ -16,6 +16,8 @@ end, {})
 
 vim.opt.autocomplete = true
 vim.opt.complete:prepend("o") -- include omnifunc (LSP) completions
+-- don't insert the first match: LSP suggests items even with no prefix
+vim.opt.completeopt:append("noselect")
 vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local client = vim.lsp.get_client_by_id(args.data.client_id)
