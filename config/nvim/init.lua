@@ -4,7 +4,6 @@ vim.pack.add({
     "https://github.com/junegunn/fzf.vim",
     "https://github.com/ledger/vim-ledger",
     "https://github.com/lifepillar/vim-solarized8",
-    "https://github.com/ggml-org/llama.vim",
 })
 vim.api.nvim_create_user_command("PackUpdate", function() vim.pack.update() end, {})
 vim.api.nvim_create_user_command("PackAutoDelete", function()
