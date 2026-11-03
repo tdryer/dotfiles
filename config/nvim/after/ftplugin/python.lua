@@ -14,6 +14,6 @@ vim.lsp.start({
     },
     on_attach = function(client, bufnr)
         -- Do not use lsp for `gq` formatting (wrapping lines)
-        vim.api.nvim_buf_set_option(bufnr, "formatexpr", "")
+        vim.bo[bufnr].formatexpr = ""
     end,
 })
