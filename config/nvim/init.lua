@@ -1,5 +1,4 @@
 vim.pack.add({
-    "https://github.com/bitc/vim-bad-whitespace",
     "https://github.com/junegunn/fzf",
     "https://github.com/junegunn/fzf.vim",
     "https://github.com/ledger/vim-ledger",
