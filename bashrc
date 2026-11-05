@@ -81,8 +81,8 @@ esac
 # prevent accidentally closing shell by requiring ctrl+d twice consecutively to exit
 export IGNOREEOF=1
 
-# Tell fzf to use ag to list files.
-export FZF_DEFAULT_COMMAND='ag --files-with-matches --nocolor --hidden --ignore .git -g ""'
+# Tell fzf to use rg to list files.
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 
 if [ $TERM = "xterm-kitty" ]; then
     # Override ctrl+l to use kitty escape code to clear the screen while
